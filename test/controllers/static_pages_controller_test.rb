@@ -8,18 +8,24 @@ class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
-    assert_select "title", "Home #@title"
+    assert_select "title", "Home #{@title}"
   end
 
   test "should get help" do
     get :help
     assert_response :success
-    assert_select "title", "Help #@title"
+    assert_select "title", "Help #{@title}"
   end
 
-  test "should ge about" do
+  test "should get about" do
     get :about
     assert_response :success
-    assert_select "title", "About #@title"
+    assert_select "title", "About #{@title}"
+  end
+
+  test "should get contacts" do
+    get :contacts
+    assert_response :success
+    assert_select "title", "Contacts #{@title}"
   end
 end
